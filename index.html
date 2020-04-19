@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>A JavaScript framework.</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/botui/build/botui.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/botui/build/botui-theme-default.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <meta name="google-site-verification" content="s9xp_mKgHJJvR0EO39LQkXtuPaEfKkFH1Ao18efqwzU" />
+    <meta name="description" content="JavaScript framework which makes it super easy to build conversational UIs">
+  </head>
+  <body>
+    <div class="botui-app-container" id="home-demo">
+      <bot-ui></bot-ui>
+      <div class="chat-button-theme-bubble">
+        <div class="chat-button" onclick="showBootUI()" style="background: rgb(37, 206, 182); color: rgb(255, 255, 255);">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="chat-icon" style="stroke: rgb(255, 255, 255);">
+            <path d="M9.37,1.34H10.8a8.2,8.2,0,0,1,0,16.39H9.37a10,10,0,0,1-2.68-.45c-.55-.15-2.23,1.81-2.63,1.36s.05-2.79-.41-3.23q-.28-.27-.54-.57A8.2,8.2,0,0,1,9.37,1.34Z" style="fill: none;"></path> 
+            <line x1="6.37" y1="7.04" x2="12.58" y2="7.04" style="fill: none; stroke-linecap: round;"></line> <line x1="6.37" y1="9.66" x2="14.31" y2="9.66" style="fill: none; stroke-linecap: round;"></line> 
+            <line x1="6.37" y1="12.28" x2="11.42" y2="12.28" style="fill: none; stroke-linecap: round;"></line>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/vue/latest/vue.min.js"></script>
+    <script src="https://unpkg.com/botui/build/botui.min.js"></script>
+    <script>
+    if (window.location.hostname.indexOf("botui.org") === 0) { // don't track local dev visits
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-102158265-2', 'auto');
+      ga('send', 'pageview');
+    } else {
+      window.ga = false;
+    }
+    </script>
+    <script src="assets/js/home-bot.js"></script>
+    <script>
+     function showBootUI(){
+       document.getElementsByClassName("botui")[0].classList.add('active');
+     }
+    </script>
+  </body>
+</html>
